@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4CLevel — совет директоров для владельца бизнеса</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+:root{--surface:#f5f2ea;--surface-sunk:#efebe1;--rule:#dcd6c8;--watermark:#9c978c;--text:#16181d;--text-strong:#2a2d34;--text-body:#3d4048;--text-muted:#5b5e66;--accent:#8a2b1f;--on-accent:#f5f2ea;--accent-soft:#b0574a;--space-12:12px;--radius-sharp:2px;--radius-table:110px;--radius-round:50%;--container:1240px;--hairline:1px;--font-serif:Newsreader,Georgia,serif;--font-sans:Geist,system-ui,sans-serif;--font-mono:"Geist Mono",ui-monospace,monospace}
+.display{font-family:var(--font-serif);font-size:96px;line-height:.98;font-weight:400;letter-spacing:-.025em}
+.heading-lg{font-family:var(--font-serif);font-size:52px;line-height:1.05;font-weight:400;letter-spacing:-.02em}
+.heading-md{font-family:var(--font-serif);font-size:40px;line-height:1.1;font-weight:400;letter-spacing:-.015em}
+.director-name{font-family:var(--font-serif);font-size:34px;line-height:1.05;font-weight:400;letter-spacing:-.015em}
+.mandate{font-family:var(--font-serif);font-size:24px;line-height:1.2;font-weight:400;font-style:italic}
+.wordmark{font-family:var(--font-serif);font-size:24px;line-height:1;font-weight:400;letter-spacing:-.01em}
+.lead{font-family:var(--font-sans);font-size:20px;line-height:1.5;font-weight:400}
+.body-lg{font-family:var(--font-sans);font-size:17px;line-height:1.6;font-weight:400}
+.body{font-family:var(--font-sans);font-size:15px;line-height:1.6;font-weight:400}
+.nav{font-family:var(--font-sans);font-size:14px;line-height:1.4;font-weight:400}
+.eyebrow{font-family:var(--font-mono);font-size:12px;line-height:1.4;font-weight:400;letter-spacing:.08em;text-transform:uppercase}
+.fcl-button{display:inline-flex;align-items:center;gap:var(--space-12);background:var(--text);color:var(--surface);border:var(--hairline) solid var(--text);padding:16px 26px;border-radius:var(--radius-sharp);font:500 16px/1 var(--font-sans);cursor:pointer;text-decoration:none;white-space:nowrap;transition:background .25s ease,color .25s ease,border-color .25s ease}
+.fcl-button:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.fcl-button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.fcl-button--small{padding:10px 16px;font-size:14px}
+.fcl-button--outline{background:transparent;color:var(--text)}
+.fcl-button--outline:hover{background:var(--text);color:var(--surface);border-color:var(--text)}
+.fcl-button__arrow{font-weight:400}
+.fcl-cta-lg .fcl-button{padding:20px 32px;font-size:18px}
+.fcl-seat{display:flex;flex-direction:column;align-items:center;gap:10px;background:transparent;border:0;padding:0;font:inherit;color:var(--text);cursor:pointer}
+.fcl-seat--label-above{flex-direction:column-reverse}
+.fcl-seat:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--radius-sharp)}
+.fcl-seat__disc{width:60px;height:60px;border-radius:var(--radius-round);display:flex;align-items:center;justify-content:center;background:var(--surface);color:var(--text);border:var(--hairline) solid var(--text);font:400 14px/1 var(--font-mono);transition:background .25s ease,color .25s ease,transform .25s ease}
+.fcl-seat__name{font:500 13px/1.25 var(--font-sans);text-align:center;max-width:14ch}
+.fcl-seat.is-selected .fcl-seat__disc{background:var(--text);color:var(--surface);transform:scale(1.12)}
+.fcl-seat--chair .fcl-seat__disc{width:80px;height:80px;background:var(--accent-soft);color:#F5F2EA;border-color:var(--accent)}
+.fcl-seat--chair.is-selected .fcl-seat__disc{background:var(--accent);color:var(--on-accent);transform:scale(1.1)}
+.fcl-field{width:100%;box-sizing:border-box;border:0;border-bottom:1px solid var(--text);border-radius:0;background:transparent;padding:10px 0;min-height:44px;font:400 17px/1.4 var(--font-sans);color:var(--text)}
+.fcl-field::placeholder{color:var(--watermark)}
+.fcl-field:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+summary{cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}
+html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}
+body{margin:0;background:#f5f2ea}
+a{color:inherit}a:hover{color:var(--accent)}
+section[id]{scroll-margin-top:16px}
+</style>
+</head>
+<body>
+<div style="background: var(--surface); color: var(--text); font-family: var(--font-sans); font-optical-sizing: auto;">
+
+<header style="border-bottom: 1px solid var(--rule);">
+<div style="max-width: var(--container); margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px;">
+<a class="wordmark" href="#top" style="text-decoration: none;">4CLevel</a>
+<nav class="nav" aria-label="Разделы" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px;">
+<a href="#solution" style="text-decoration: none; padding: 12px 0;">Как это работает</a>
+<a href="#board" style="text-decoration: none; padding: 12px 0;">Совет</a>
+<a href="#start" style="text-decoration: none; padding: 12px 0;">Цена</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 20px;">
+<div class="nav" role="group" aria-label="Язык" style="display: flex; gap: 4px;">
+<button type="button" aria-pressed="false" style="background: transparent; border: 0; padding: 14px 6px; font: inherit; letter-spacing: inherit; color: var(--text-muted); cursor: pointer;">EN</button>
+<button type="button" aria-pressed="true" style="background: transparent; border: 0; padding: 14px 6px; font: inherit; letter-spacing: inherit; color: var(--text); text-decoration: underline; text-underline-offset: 4px; cursor: pointer;">RU</button>
+<button type="button" aria-pressed="false" style="background: transparent; border: 0; padding: 14px 6px; font: inherit; letter-spacing: inherit; color: var(--text-muted); cursor: pointer;">UA</button>
+</div>
+<a class="fcl-button fcl-button--outline fcl-button--small" href="#start">Собрать совет за 3 минуты</a>
+</div>
+</div>
+</header>
+
+<section id="top" style="max-width: var(--container); margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 48px; align-items: end;">
+<div style="flex: 1.5 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 32px; align-items: flex-start;">
+<h1 class="display" style="margin: 0; font-size: clamp(40px, 5.4vw, 76px); max-width: 13ch; text-wrap: balance;">Крупное решение, а посоветоваться не с кем.</h1>
+<div class="fcl-cta-lg" style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start;">
+<a class="fcl-button" href="#start">Собрать совет за 3 минуты<span class="fcl-button__arrow" aria-hidden="true">→</span></a>
+<p class="body" style="margin: 0; color: var(--text-body);">Первый месяц бесплатно. Карта и ключи не нужны.</p>
+</div>
+</div>
+<div style="flex: 1 1 340px; min-width: 0; border-top: 2px solid var(--text);">
+<p class="mandate" style="margin: 0; padding: 20px 0; border-bottom: 1px solid var(--rule);">«Выручка растёт, а денег на счёте не прибавляется».</p>
+<p class="mandate" style="margin: 0; padding: 20px 0; border-bottom: 1px solid var(--rule);">«Все вокруг советуют разное, а отвечать мне».</p>
+<p class="mandate" style="margin: 0; padding: 20px 0; border-bottom: 1px solid var(--rule);">«Консультант приходит раз в квартал, а решать надо в четверг».</p>
+</div>
+</section>
+
+<section id="solution" style="background: var(--surface-sunk); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+<div style="max-width: var(--container); margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 48px; align-items: stretch;">
+<div style="min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 40px;">
+<h2 class="heading-lg" style="margin: 0; font-size: clamp(32px, 3.3vw, 46px); text-wrap: balance;">Совет директоров, который знает цифры вашей отрасли, спорит и записывает решение.</h2>
+<div style="border-top: 2px solid var(--text);">
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0; border-bottom: 1px solid var(--rule);"><h3 class="mandate" style="margin: 0; font-style: normal;">Вы рассказываете</h3><p class="body" style="margin: 0; color: var(--text-body);">Три поля: компания, чем занимаетесь, какое решение предстоит.</p></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0; border-bottom: 1px solid var(--rule);"><h3 class="mandate" style="margin: 0; font-style: normal;">Директора спорят</h3><p class="body" style="margin: 0; color: var(--text-body);">Каждый отвечает, не видя остальных. Потом они возражают друг другу.</p></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0; border-bottom: 1px solid var(--rule);"><h3 class="mandate" style="margin: 0; font-style: normal;">Председатель записывает вердикт</h3><p class="body" style="margin: 0; color: var(--text-body);">Решение, ответственный, дата. Следовать ему или нет, решаете вы.</p></div>
+</div>
+</div>
+<div style="min-width: 0; background: var(--surface); border: 1px solid var(--text); padding: clamp(24px, 2.4vw, 32px); display: flex; flex-direction: column; justify-content: space-between; gap: 18px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding-bottom: 14px; border-bottom: 2px solid var(--text); font: 500 13px/1.4 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase;"><span>Протокол совета № 041</span><span>12 января 2026</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<span class="body" style="color: var(--text-body);">Вопрос</span>
+<p style="margin: 0; font: italic 400 21px/1.3 var(--font-serif);">Нанимать второго врача или сначала убрать неявки?</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<span class="body" style="color: var(--text-body);">Решили</span>
+<h3 style="margin: 0; font: 400 clamp(26px, 2.5vw, 34px)/1.12 var(--font-serif); letter-spacing: -0.015em;">Сначала убрать неявки. Вопрос о втором враче решить 1 марта.</h3>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 14px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px;"><span style="font: 400 48px/1 var(--font-serif);">4</span><span class="body" style="color: var(--text-body);">за</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px;"><span style="font: 400 48px/1 var(--font-serif);">1</span><span class="body" style="color: var(--text-body);">против</span></div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px;"><span style="font: 400 48px/1 var(--font-serif);">1</span><span class="body" style="color: var(--text-body);">иначе</span></div>
+</div>
+<div class="body" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 6px 24px; color: var(--text-strong);">
+<span><span style="color: var(--text-muted);">Ответственный:</span> управляющий</span>
+<span><span style="color: var(--text-muted);">Срок:</span> шесть недель</span>
+<span><span style="color: var(--text-muted);">Стоп:</span> если неявок больше 10%</span>
+<span><span style="color: var(--text-muted);">Пересмотр:</span> 1 марта</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 24px;">
+<span class="body" style="color: var(--text-body);">Пример, клиент не реальный.</span>
+<div style="display: flex; flex-direction: column; gap: 6px; width: 220px;"><span aria-hidden="true" style="height: 20px; border-bottom: 1px solid var(--text);"></span><span class="body" style="color: var(--text-body);">Председатель совета</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="board">
+<div style="max-width: var(--container); margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 48px; align-items: center;">
+<div style="flex: 1.4 1 520px; min-width: 0; display: flex; align-items: center; gap: 24px;">
+<button class="fcl-seat fcl-seat--chair is-selected" type="button" data-seat="CH" aria-pressed="true"><span class="fcl-seat__disc">CH</span><span class="fcl-seat__name">Председатель</span></button>
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; justify-content: space-around; gap: 8px;">
+<button class="fcl-seat fcl-seat--label-above" type="button" data-seat="I" aria-pressed="false"><span class="fcl-seat__disc">I</span><span class="fcl-seat__name">Финансовый директор</span></button>
+<button class="fcl-seat fcl-seat--label-above" type="button" data-seat="II" aria-pressed="false"><span class="fcl-seat__disc">II</span><span class="fcl-seat__name">Директор по росту</span></button>
+<button class="fcl-seat fcl-seat--label-above" type="button" data-seat="III" aria-pressed="false"><span class="fcl-seat__disc">III</span><span class="fcl-seat__name">Операционный директор</span></button>
+</div>
+<div aria-hidden="true" style="height: 132px; background: var(--surface-sunk); border: 1px solid var(--text); border-radius: var(--radius-table); display: flex; align-items: center; justify-content: center;"><span class="eyebrow" style="color: var(--watermark);">Стол совета</span></div>
+<div style="display: flex; justify-content: space-around; gap: 8px;">
+<button class="fcl-seat" type="button" data-seat="IV" aria-pressed="false"><span class="fcl-seat__disc">IV</span><span class="fcl-seat__name">Директор по бренду</span></button>
+<button class="fcl-seat" type="button" data-seat="V" aria-pressed="false"><span class="fcl-seat__disc">V</span><span class="fcl-seat__name">Директор по рискам</span></button>
+<button class="fcl-seat" type="button" data-seat="VI" aria-pressed="false"><span class="fcl-seat__disc">VI</span><span class="fcl-seat__name">Адвокат дьявола</span></button>
+</div>
+</div>
+</div>
+<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+<div style="border-top: 2px solid var(--text); padding-top: 20px; display: flex; flex-direction: column; gap: 16px; min-height: 230px;">
+<h2 class="director-name" style="margin: 0;"><span data-f="name">Председатель</span></h2>
+<p class="mandate" style="margin: 0;">«<span data-f="mandate">Я называю конфликт, а потом записываю решение.</span>»</p>
+<p class="body" style="margin: 0; color: var(--text-body);"><span data-f="role">Показывает, где директора расходятся, и подписывает вердикт: решение, ответственный, дата.</span></p>
+<p class="body" style="margin: 0; color: var(--text-body);"><span data-f="themes">Вердикт · Ответственный · Дата</span></p>
+</div>
+<p class="body" style="margin: 0; color: var(--text-body);">Совет собирается под ваш бизнес. Выбирать модели и писать инструкции не нужно.</p>
+</div>
+</div>
+</section>
+
+<section id="start" style="border-top: 2px solid var(--text);">
+<div style="max-width: var(--container); margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 48px; align-items: start;">
+<div style="flex: 1.2 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; flex-direction: column;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 24px; padding: 18px 0; border-top: 2px solid var(--text); border-bottom: 1px solid var(--rule); font: 400 clamp(24px, 2.6vw, 34px)/1.15 var(--font-serif); letter-spacing: -0.015em;"><span>Консультант</span><span>$300–500 в час</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 24px; padding: 22px 0; border-bottom: 1px solid var(--rule); color: var(--accent); font: 400 clamp(38px, 4.4vw, 60px)/1.05 var(--font-serif); letter-spacing: -0.02em;"><span>Совет</span><span>$10 в месяц</span></div>
+</div>
+<p class="lead" style="margin: 0;">Один тариф. Первый месяц бесплатно.</p>
+<p class="body" style="margin: 0; color: var(--text-body); max-width: 46ch;">Весь совет, отраслевые цифры, память о вашей компании и все вердикты в истории. Одна неудачная аренда стоит дороже, чем годы подписки.</p>
+</div>
+<form id="start-form" style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+<h2 class="heading-md" style="margin: 0;">Принесите одно решение</h2>
+<label style="display: flex; flex-direction: column; gap: 4px;"><span class="body" style="color: var(--text-body);">Название компании</span><input class="fcl-field" type="text" name="company" placeholder="Стоматология на Длугой"></label>
+<label style="display: flex; flex-direction: column; gap: 4px;"><span class="body" style="color: var(--text-body);">Чем занимается бизнес</span><input class="fcl-field" type="text" name="business" placeholder="Два кресла, шесть человек"></label>
+<label style="display: flex; flex-direction: column; gap: 4px;"><span class="body" style="color: var(--text-body);">Решение, которое вам предстоит</span><input class="fcl-field" type="text" name="challenge" placeholder="Нанимать второго врача или нет"></label>
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; padding-top: 8px;">
+<button class="fcl-button" type="submit">Собрать совет за 3 минуты<span class="fcl-button__arrow" aria-hidden="true">→</span></button>
+<p class="body" style="margin: 0; color: var(--text-body);">Нужна только почта. Ваши данные не используются для обучения моделей.</p>
+</div>
+</form>
+</div>
+</section>
+
+<section id="questions" style="border-top: 1px solid var(--rule);">
+<div style="max-width: var(--container); margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 48px; align-items: start;">
+<h2 class="heading-md" style="margin: 0; flex: 1 1 260px;">Частые вопросы</h2>
+<div style="flex: 2.4 1 560px; min-width: 0; border-top: 2px solid var(--text);">
+<details open style="border-bottom: 1px solid var(--rule); padding: 20px 0;"><summary class="mandate" style="font-style: normal;">Чем это отличается от моего проекта в ChatGPT?</summary><p class="body-lg" style="margin: 12px 0 0; color: var(--text-body); max-width: 66ch;">Проект может хорошо знать ваш бизнес, но это одна модель и один ответ. Здесь несколько директоров на разных моделях спорят, а председатель записывает решение с ответственным и датой.</p></details>
+<details style="border-bottom: 1px solid var(--rule); padding: 20px 0;"><summary class="mandate" style="font-style: normal;">Он не выдумывает цифры?</summary><p class="body-lg" style="margin: 12px 0 0; color: var(--text-body); max-width: 66ch;">Нет. Цифры о компании берутся из ваших данных или помечены как допущения. У отраслевых есть источник и год.</p></details>
+<details style="border-bottom: 1px solid var(--rule); padding: 20px 0;"><summary class="mandate" style="font-style: normal;">Куда попадают данные о моём бизнесе?</summary><p class="body-lg" style="margin: 12px 0 0; color: var(--text-body); max-width: 66ch;">Они не используются для обучения моделей и обрабатываются в юрисдикции ЕС.</p></details>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid var(--rule);">
+<div class="body" style="max-width: var(--container); margin: 0 auto; padding: 28px 24px 40px; display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: baseline; justify-content: space-between; color: var(--text-body);">
+<span class="wordmark" style="color: var(--text); font-size: 20px;">4CLevel</span>
+<span>EN · RU · UA</span>
+</div>
+</footer>
+
+</div>
+
+<script>
+const D=[{"id": "CH", "numeral": "CH", "name": "Председатель", "mandate": "Я называю конфликт, а потом записываю решение.", "role": "Показывает, где директора расходятся, и подписывает вердикт: решение, ответственный, дата.", "themes": "Вердикт · Ответственный · Дата"}, {"id": "I", "numeral": "I", "name": "Финансовый директор", "mandate": "Покажите, где остаются деньги.", "role": "Смотрит на решение через прибыль, деньги на счёте и цену ошибки.", "themes": "Прибыль · Деньги · Цена"}, {"id": "II", "numeral": "II", "name": "Директор по росту", "mandate": "Откуда придёт следующий клиент?", "role": "Отвечает за спрос, повторные визиты и каналы, которые приводят людей.", "themes": "Спрос · Повторные визиты · Каналы"}, {"id": "III", "numeral": "III", "name": "Операционный директор", "mandate": "Кто будет делать это в понедельник?", "role": "Проверяет, есть ли люди, часы и порядок работы, чтобы решение выполнить.", "themes": "Загрузка · Люди · Порядок"}, {"id": "IV", "numeral": "IV", "name": "Директор по бренду", "mandate": "Что подумают ваши постоянные клиенты?", "role": "Говорит от имени клиента и репутации, которую вы уже заработали.", "themes": "Репутация · Клиенты · Сервис"}, {"id": "V", "numeral": "V", "name": "Директор по рискам", "mandate": "Сколько это может стоить в худшем случае?", "role": "Читает договор и считает худший исход до подписи.", "themes": "Договоры · Худший исход · Закон"}, {"id": "VI", "numeral": "VI", "name": "Адвокат дьявола", "mandate": "Я говорю последним и спорю со всеми.", "role": "Бьёт по допущению, с которым все согласились.", "themes": "Несогласие · Допущения"}];
+const seats=[...document.querySelectorAll('[data-seat]')];
+function pick(id){const d=D.find(x=>x.id===id);if(!d)return;
+ seats.forEach(b=>{const on=b.dataset.seat===id;b.classList.toggle('is-selected',on);b.setAttribute('aria-pressed',on);});
+ for(const k of ['name','mandate','role','themes'])document.querySelector('[data-f="'+k+'"]').textContent=d[k];}
+seats.forEach(b=>{const f=()=>pick(b.dataset.seat);b.addEventListener('click',f);b.addEventListener('mouseenter',f);b.addEventListener('focus',f);});
+const form=document.getElementById('start-form');
+const first=form.innerHTML;
+function stepOne(){form.innerHTML=first;form.onsubmit=e=>{e.preventDefault();stepTwo();};}
+function stepTwo(){form.innerHTML='<h2 class="heading-md" style="margin:0">Куда прислать протокол?</h2>'+
+ '<label style="display:flex;flex-direction:column;gap:4px"><span class="body" style="color:var(--text-body)">Ваша почта</span><input class="fcl-field" type="email" name="email" placeholder="you@company.com" required></label>'+
+ '<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding-top:8px"><button class="fcl-button" type="submit">Начать сессию<span class="fcl-button__arrow" aria-hidden="true">→</span></button><button class="fcl-button fcl-button--outline" type="button" id="back">Назад</button></div>'+
+ '<p class="body" style="margin:0;color:var(--text-body)">Карта и ключи не нужны.</p>';
+ document.getElementById('back').onclick=stepOne;
+ form.onsubmit=e=>{e.preventDefault();stepThree();};form.querySelector('input').focus();}
+function stepThree(){form.innerHTML='<h2 class="heading-md" style="margin:0">Совет собирается</h2>'+
+ '<p class="body-lg" style="margin:0;color:var(--text-body)">Это прототип: на этом шаге в продукте открывается сессия совета.</p>'+
+ '<div><button class="fcl-button fcl-button--outline" type="button" id="again">Начать заново</button></div>';
+ document.getElementById('again').onclick=stepOne;}
+stepOne();
+</script>
+</body>
+</html>
