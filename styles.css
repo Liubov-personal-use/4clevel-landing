@@ -1,0 +1,42 @@
+:root{--surface:#f5f2ea;--surface-sunk:#efebe1;--rule:#dcd6c8;--watermark:#9c978c;--text:#16181d;--text-strong:#2a2d34;--text-body:#3d4048;--text-muted:#5b5e66;--accent:#8a2b1f;--on-accent:#f5f2ea;--accent-soft:#b0574a;--space-12:12px;--radius-sharp:2px;--radius-table:110px;--radius-round:50%;--container:1240px;--hairline:1px;--font-serif:Newsreader,Georgia,serif;--font-sans:Geist,system-ui,sans-serif;--font-mono:"Geist Mono",ui-monospace,monospace}
+.display{font-family:var(--font-serif);font-size:96px;line-height:.98;font-weight:400;letter-spacing:-.025em}
+.heading-lg{font-family:var(--font-serif);font-size:52px;line-height:1.05;font-weight:400;letter-spacing:-.02em}
+.heading-md{font-family:var(--font-serif);font-size:40px;line-height:1.1;font-weight:400;letter-spacing:-.015em}
+.director-name{font-family:var(--font-serif);font-size:34px;line-height:1.05;font-weight:400;letter-spacing:-.015em}
+.mandate{font-family:var(--font-serif);font-size:24px;line-height:1.2;font-weight:400;font-style:italic}
+.wordmark{font-family:var(--font-serif);font-size:24px;line-height:1;font-weight:400;letter-spacing:-.01em}
+.lead{font-family:var(--font-sans);font-size:20px;line-height:1.5;font-weight:400}
+.body-lg{font-family:var(--font-sans);font-size:17px;line-height:1.6;font-weight:400}
+.body{font-family:var(--font-sans);font-size:15px;line-height:1.6;font-weight:400}
+.nav{font-family:var(--font-sans);font-size:14px;line-height:1.4;font-weight:400}
+.eyebrow{font-family:var(--font-mono);font-size:12px;line-height:1.4;font-weight:400;letter-spacing:.08em;text-transform:uppercase}
+.fcl-button{display:inline-flex;align-items:center;gap:var(--space-12);background:var(--text);color:var(--surface);border:var(--hairline) solid var(--text);padding:16px 26px;border-radius:var(--radius-sharp);font:500 16px/1 var(--font-sans);cursor:pointer;text-decoration:none;white-space:nowrap;transition:background .25s ease,color .25s ease,border-color .25s ease}
+.fcl-button:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.fcl-button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.fcl-button--small{padding:10px 16px;font-size:14px}
+.fcl-button--outline{background:transparent;color:var(--text)}
+.fcl-button--outline:hover{background:var(--text);color:var(--surface);border-color:var(--text)}
+.fcl-button__arrow{font-weight:400}
+.fcl-cta-lg .fcl-button{padding:20px 32px;font-size:18px}
+.fcl-seat{display:flex;flex-direction:column;align-items:center;gap:10px;background:transparent;border:0;padding:0;font:inherit;color:var(--text);cursor:pointer}
+.fcl-seat--label-above{flex-direction:column-reverse}
+.fcl-seat:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--radius-sharp)}
+.fcl-seat__disc{width:60px;height:60px;border-radius:var(--radius-round);display:flex;align-items:center;justify-content:center;background:var(--surface);color:var(--text);border:var(--hairline) solid var(--text);font:400 14px/1 var(--font-mono);transition:background .25s ease,color .25s ease,transform .25s ease}
+.fcl-seat__name{font:500 13px/1.25 var(--font-sans);text-align:center;max-width:14ch}
+.fcl-seat.is-selected .fcl-seat__disc{background:var(--text);color:var(--surface);transform:scale(1.12)}
+.fcl-seat--chair .fcl-seat__disc{width:80px;height:80px;background:var(--accent-soft);color:#F5F2EA;border-color:var(--accent)}
+.fcl-seat--chair.is-selected .fcl-seat__disc{background:var(--accent);color:var(--on-accent);transform:scale(1.1)}
+.fcl-field{width:100%;box-sizing:border-box;border:0;border-bottom:1px solid var(--text);border-radius:0;background:transparent;padding:10px 0;min-height:44px;font:400 17px/1.4 var(--font-sans);color:var(--text)}
+.fcl-field::placeholder{color:var(--watermark)}
+.fcl-field:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+summary{cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}
+html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}
+body{margin:0;background:#f5f2ea}
+a{color:inherit}a:hover{color:var(--accent)}
+section[id]{scroll-margin-top:16px}
+#profile{transition:opacity .25s ease}
+#profile.is-fading{opacity:0}
+#auto-toggle{align-self:flex-start;background:transparent;border:0;padding:12px 0;min-height:44px;color:var(--text-body);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+#auto-toggle:hover{color:var(--accent)}
+#auto-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
