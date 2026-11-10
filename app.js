@@ -8,14 +8,15 @@ const D=[
 {id:'VI',name:'Адвокат дьявола',mandate:'Я говорю последним и спорю со всеми.',role:'Бьёт по допущению, с которым все согласились.',themes:'Несогласие · Допущения'}
 ];
 
-/* Стол совета: роли сменяются сами каждые 2 секунды. */
+/* Стол совета: роли сменяются сами каждые 2 секунды.
+   Наведение мыши ставит смену на паузу, нажатие на кресло — на 8 секунд. */
 const STEP=2000;
+const HOLD=8000;
 const seats=[...document.querySelectorAll('[data-seat]')];
 const board=document.getElementById('board');
 const profile=document.getElementById('profile');
-const toggle=document.getElementById('auto-toggle');
 const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let current='CH',timer=null,swap=null,stopped=calm,hover=false,focus=false,visible=false;
+let current='CH',timer=null,swap=null,resume=null,stopped=calm,hover=false,focus=false,visible=false;
 
 function show(id){
   const d=D.find(x=>x.id===id);
@@ -39,20 +40,22 @@ function sync(){
   const run=!stopped&&!hover&&!focus&&visible;
   if(run&&!timer)timer=setInterval(next,STEP);
   if(!run&&timer){clearInterval(timer);timer=null;}
-  toggle.textContent=stopped?'Показывать по очереди':'Пауза';
+}
+function hold(){
+  stopped=true;sync();
+  clearTimeout(resume);
+  if(!calm)resume=setTimeout(()=>{stopped=false;sync();},HOLD);
 }
 seats.forEach(b=>{
   const id=b.dataset.seat;
   b.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')show(id);});
-  b.addEventListener('focus',()=>{focus=true;show(id);sync();});
+  b.addEventListener('focus',()=>{if(b.matches(':focus-visible')){focus=true;show(id);sync();}});
   b.addEventListener('blur',()=>{focus=false;sync();});
-  b.addEventListener('click',()=>{show(id);stopped=true;sync();});
+  b.addEventListener('click',()=>{show(id);hold();});
 });
 board.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'){hover=true;sync();}});
 board.addEventListener('pointerleave',()=>{hover=false;sync();});
-toggle.addEventListener('click',()=>{stopped=!stopped;if(!stopped)next();sync();});
 new IntersectionObserver(es=>{visible=es[0].isIntersecting;sync();},{threshold:0.4}).observe(board);
-sync();
 
 /* Форма: три шага прототипа, ничего не отправляется. */
 const form=document.getElementById('start-form');
