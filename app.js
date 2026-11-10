@@ -8,8 +8,8 @@ const D=[
 {id:'VI',name:'Адвокат дьявола',mandate:'Я говорю последним и спорю со всеми.',role:'Бьёт по допущению, с которым все согласились.',themes:'Несогласие · Допущения'}
 ];
 
-/* Стол совета: роли сменяются сами каждые 5 секунд. */
-const STEP=5000;
+/* Стол совета: роли сменяются сами каждые 2 секунды. */
+const STEP=2000;
 const seats=[...document.querySelectorAll('[data-seat]')];
 const board=document.getElementById('board');
 const profile=document.getElementById('profile');
